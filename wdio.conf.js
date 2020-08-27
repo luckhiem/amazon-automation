@@ -1,7 +1,7 @@
 exports.config = {
     runner: 'local',
     specs: [
-        './test/specs/**/*.js'
+        './test/test_scripts/**/*.js'
     ],
     maxInstances: 10,
     capabilities: [{
@@ -20,6 +20,7 @@ exports.config = {
     reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
+        require: ['@babel/register'],
         timeout: 60000
     },
 }
