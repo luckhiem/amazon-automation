@@ -21,7 +21,7 @@ export default class Auth {
 
     doLogin() {
         LoginPage
-            .inputEmail(this._username)
+            .inputEmail(this._email)
             .clickOnBtnContinue()
             .inputPassword(this._password)
             .clickOnBtnSignIn()
