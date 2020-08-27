@@ -1,7 +1,9 @@
 import LoginPage from '../pages/login.po';
 import ElementHandler from '../common/ElementHandler';
+import BrowserHandler from '../common/BrowserHandler';
+import Config from '../EnvConfig'
 
-const btnLoginNav = '#nav-link-accountList';
+const BTN_LOGIN_NAV = '#nav-link-accountList';
 const TEXT_LOCATOR = '.transaction-approval-word-break'
 
 export default class Auth {
@@ -11,8 +13,8 @@ export default class Auth {
     }
 
     openLoginPage() {
-        browser.url(`https://www.amazon.com/`)
-        ElementHandler.click(btnLoginNav);
+        BrowserHandler.navigate(Config.url)
+        ElementHandler.click(BTN_LOGIN_NAV);
 
         return this
     }
