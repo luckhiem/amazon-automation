@@ -4,7 +4,9 @@ import BrowserHandler from '../common/BrowserHandler';
 import Config from '../EnvConfig'
 
 const BTN_LOGIN_NAV = '#nav-link-accountList';
-const TEXT_LOCATOR = '.transaction-approval-word-break'
+const TEXT_LOCATOR = '.transaction-approval-word-break';
+const ALERT_TITLE_LOCATOR = "#auth-error-message-box .a-alert-heading";
+const ALERT_CONTENT_LOCATOR = "#auth-error-message-box .a-list-item";
 
 export default class Auth {
     constructor(email, password) {
@@ -30,8 +32,15 @@ export default class Auth {
     }
 
     verifyNavigateToNotificationPage(){
-        const text = "To complete the sign-in, approve the notification sent to:";
-        ElementHandler.verifyText(TEXT_LOCATOR, text)
+        const NOTIFICATION_SENT_VALUE = "To complete the sign-in, approve the notification sent to:";
+        ElementHandler.verifyText(TEXT_LOCATOR, NOTIFICATION_SENT_VALUE)
+    }
+
+    verifyAlertWhenInputInvalidPassword(){
+        const ALERT_TITLE_VALUE = "There was a problem";
+        const ALERT_CONTENT_VALUE = "Your password is incorrect";
+        ElementHandler.verifyText(ALERT_TITLE_LOCATOR, ALERT_TITLE_VALUE);
+        ElementHandler.verifyText(ALERT_CONTENT_LOCATOR, ALERT_CONTENT_VALUE);
     }
 }
 
