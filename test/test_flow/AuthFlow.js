@@ -8,7 +8,7 @@ const TEXT_LOCATOR = '.transaction-approval-word-break'
 
 export default class Auth {
     constructor(email, password) {
-        this._username = email;
+        this._email = email;
         this._password = password;
     }
 
