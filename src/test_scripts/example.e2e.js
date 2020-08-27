@@ -1,5 +1,5 @@
 import AuthFlow from '../test_flow/AuthFlow';
-import User from '../entities/User'
+import User from '../entities/User';
 
 const userTest = new User('khiemltv@gmail.com', 'khiemluc2903')
 
