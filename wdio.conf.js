@@ -1,7 +1,7 @@
 exports.config = {
     runner: 'local',
     specs: [
-        './src/test_scripts/**/*.js'
+        './src/test_scripts/*.spec.js'
     ],
     maxInstances: 10,
     capabilities: [{
