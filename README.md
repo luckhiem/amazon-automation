@@ -21,8 +21,8 @@ This repository is used for executing automation test by using WebdriverIO, it's
 ```
 $ mkdir auto-test
 $ cd auto-test
-$ git clone https://github.com/luckhiem/aspire-automation-framework.git
-$ cd aspire-auto-framework
+$ git clone https://github.com/luckhiem/amazon-automation.git
+$ cd amazone-automation
 $ npm install
 ```
 
@@ -50,11 +50,9 @@ The framework base on WebdriverIO & Mocha
 │   ├── enity                        // folder includes file define entity model project
 │   ├── pages
 │   │   ├──login                     // folder contains page object for using automate authentication page
+│   |── test_flows                   // folder includes test flows for web automation
 │   |── test_scripts                 // folder includes test script for web automation
-│   |── utils                        // folder includes common funcions/ultilities that can used in all project
-│   |── config.js                    // file includes all config that can used in the project
-│   |── environment.json             // file includes the information to using for this project (domain, admin...)
+│   |── EnvConfig.json               // file includes the information to using for this project (domain, admin...)
 │── package.json                     // file to manage all dependencies to using in this project
-│── test-web.conf.js                 // config file to execute test in web
-│── test-ci.conf.js                  // config file to execute test in CI
+│── wdio.conf.js                     // config file to execute test in web
 ```
